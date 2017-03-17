@@ -2,6 +2,7 @@ package models;
 
 import play.data.validation.Constraints.Email;
 import play.data.validation.Constraints.Required;
+import play.data.validation.Constraints.Password;
 
 /**
  * Данный класс необходим для обработки формы логина.
@@ -31,6 +32,7 @@ public class Login {
     public String email;
 
     //todo обязательное поле
+    @Password (message = "Некорректный пароль")
     @Required
     public String password;
 
